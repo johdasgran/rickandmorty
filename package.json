@@ -1,0 +1,11 @@
+{
+  "name": "rickandmorty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "callback": "node src/callbacks/index.js"
+  },
+  "author": "Johdasgran",
+  "license": "MIT"
+}
