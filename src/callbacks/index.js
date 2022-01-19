@@ -1,3 +1,5 @@
+/** Callback suma, resta */
+
 function sum(n1, n2){
     return n1 + n2 + " desde sum";
 }
@@ -7,17 +9,18 @@ function resta(n1, n2, n3) {
 }
 
 function calc(n1, n2, n3, callback) {
-    console.log("callback----")
+    console.log("callback ---->")
     return callback(n1, n2, n3);
 }
 
 console.log(calc(4, 8, 2, resta));
 
 
-/**/
+/** Fecha **/
 
 function date(callback) {
     console.log(new Date, "firts");
+
     setTimeout(function () {
         let fecha = new Date;
         callback(fecha);
