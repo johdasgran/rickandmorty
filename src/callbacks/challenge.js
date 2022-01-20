@@ -15,3 +15,4 @@ function fetchInfo(url_api, callback) {
     }
     xhttp.send();
 }
+

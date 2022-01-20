@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "callback": "node src/callbacks/index.js"
+    "dev": "node src/callbacks/challenge.js"
   },
   "author": "Johdasgran",
   "license": "MIT",
