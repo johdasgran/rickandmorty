@@ -59,7 +59,7 @@ body {
 
 header {
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   place-content: center;
   height: 90px;
   width: 100%;
@@ -77,7 +77,7 @@ header {
 
 .main {
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, minmax(140px, 180px));
   place-content: center;
   gap: 12px;
   margin: 12px;
@@ -109,7 +109,6 @@ header {
 
 }
 
-
 .card-title p,
 .location p {
   text-align: start;
@@ -125,17 +124,25 @@ header {
 
 .footer {
   display: flex;
+  flex-direction: column;
   place-items: center;
   place-content: center;
-  height: 50px;
+  height: 100px;
   background-color: var(--rick-secondary);
 }
 
-.footer h3 {
+.footer h1 {
   color: var(--rick-dark);
+  font-size: var(--lg);
+  font-weight: 700;
+  padding-bottom: 8px;
 }
 
-.footer h3 a {
+.footer p {
+  font-weight: 500;
+}
+
+.footer p a {
   text-decoration: none;
   color: var(--rick-purple-dark);
 }

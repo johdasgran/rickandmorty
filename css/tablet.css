@@ -1,0 +1,39 @@
+:root {
+  /* Font size */
+  --sm: 1.6rem;
+  --md: 2.2rem;
+  --lg: 2.8rem;
+}
+
+header {
+  height: 180px;
+}
+
+.header img {
+  height: 150px;
+  margin-bottom: 100px;
+}
+
+/*** Container Card ***/
+
+.main {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 200px));
+  gap: 20px;
+}
+
+.container-text {
+  padding: 90px 8px 8px 8px;
+}
+
+.card-image img {
+  top: calc(0% - 75px);
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+}
+
+/** Footer **/
+
+.footer {
+  height: 150px;
+}
