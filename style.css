@@ -26,11 +26,11 @@ html {
   min-width: 320px;
 }
 
-h1 {
+/* h1 {
   font-size: 9rem;
   font-weight: 700;
   line-height: 9.4rem;
-}
+} */
 
 h2 {
   font-size: var(--lg);
@@ -46,8 +46,11 @@ header {
   display: flex;
   place-items: center;
   place-content: center;
-  height: 250px;
+  /* height: 250px; */
   width: 100%;
-  background-color: var(--rick-primary);
+  /* background-color: var(--rick-primary); */
 }
-
+.header img {
+  /* height: 200px; */
+  width: auto;
+}
