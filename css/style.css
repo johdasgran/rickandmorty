@@ -4,6 +4,9 @@
   --rick-dark: #010727;
   --rick-title: #05322e;
   --rick-text: #184d57;
+  --rick-secondary: #ace9fd;
+  --rick-purple-dark: #9200b6;
+  --rick-purple-light:#eabbf3;
 
   /* Font size */
   --sm: 1.2rem;
@@ -50,7 +53,7 @@ p {
 
 body {
   background-color: var(--rick-dark);
-  margin: 12px;
+  
 }
 
 header {
@@ -60,6 +63,7 @@ header {
   height: 90px;
   width: 100%;
   /* margin-bottom: 24px; */
+  margin-top: 24px;
   margin-bottom: 80px;
 }
 .header img {
@@ -75,6 +79,7 @@ header {
   grid-template-columns: repeat(2, 140px);
   place-content: center;
   gap: 12px;
+  margin: 12px;
 }
 
 .container-card {
@@ -98,8 +103,10 @@ header {
   /* width: 100%; */
   height: 120px;
   border-radius: 50%;
-  padding: 8px;
+  border: 4px solid var(--rick-purple-light);
+  /* padding: 8px; */
 }
+
 
 .card-title p,
 .location p {
@@ -109,4 +116,24 @@ header {
 
 .container-text span {
   font-weight: var(--medium);
+}
+
+
+/** Footer **/
+
+.footer {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  height: 50px;
+  background-color: var(--rick-secondary);
+}
+
+.footer h3 {
+  color: var(--rick-dark);
+}
+
+.footer h3 a {
+  text-decoration: none;
+  color: var(--rick-purple-dark);
 }
