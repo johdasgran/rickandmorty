@@ -26,31 +26,50 @@ html {
   min-width: 320px;
 }
 
-/* h1 {
-  font-size: 9rem;
-  font-weight: 700;
-  line-height: 9.4rem;
-} */
+h1 {
+  font-size: var(--lg);
+}
 
 h2 {
-  font-size: var(--lg);
-  font-weight: 700;
-  line-height: 2.6rem;
+  font-size: var(--md);
 }
 
 body {
   background-color: var(--rick-dark);
+  margin: 12px;
 }
 
 header {
   display: flex;
   place-items: center;
   place-content: center;
-  /* height: 250px; */
+  height: 90px;
   width: 100%;
-  /* background-color: var(--rick-primary); */
+  margin-bottom: 24px;
 }
 .header img {
-  /* height: 200px; */
+  height: 80px;
   width: auto;
+}
+
+/*** Container Card ***/
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  place-content: center;
+  gap: 20px;
+}
+
+.container-card {
+  background-color: #e8f2fe;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 8px;
 }
