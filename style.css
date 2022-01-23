@@ -1,0 +1,53 @@
+:root {
+  /* Colors */
+  --rick-primary: #e8f2fe;
+  --rick-dark: #010727;
+
+  /* Font size */
+  --sm: 1.4rem;
+  --md: 1.8rem;
+  --lg: 2.4rem;
+
+  /* Weight */
+  --light: 300;
+  --medium: 500;
+  --bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Oxanium", cursive;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: 9rem;
+  font-weight: 700;
+  line-height: 9.4rem;
+}
+
+h2 {
+  font-size: var(--lg);
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+
+body {
+  background-color: var(--rick-dark);
+}
+
+header {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  height: 250px;
+  width: 100%;
+  background-color: var(--rick-primary);
+}
+
