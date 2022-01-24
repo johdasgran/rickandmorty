@@ -5,13 +5,16 @@
   --lg: 2.8rem;
 }
 
+h2 {
+  padding: 4px 0;
+}
+
 header {
   height: 180px;
 }
 
 .header img {
   height: 150px;
-  margin-bottom: 100px;
 }
 
 /*** Container Card ***/
@@ -21,8 +24,12 @@ header {
   gap: 20px;
 }
 
+.container-card {
+  margin-bottom: 90px;
+}
+
 .container-text {
-  padding: 90px 8px 8px 8px;
+  padding: 90px 8px 20px 8px;
 }
 
 .card-image img {

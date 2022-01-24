@@ -1,0 +1,49 @@
+:root {
+    /* Font size */
+    --sm: 2rem;
+    --md: 2.6rem;
+    --lg: 3.2rem;
+  }
+
+  h2 {
+    padding: 6px 0;
+  }
+  
+  
+  header {
+    height: 250px;
+    margin-bottom: 140px;
+  }
+  
+  .header img {
+    height: 250px;
+  }
+  
+  /*** Container Card ***/
+  
+  .main {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 250px));
+    gap: 30px;
+  }
+
+  .container-card {
+    margin-bottom: 120px;
+  }
+  
+  .container-text {
+    padding: 120px 8px 30px 8px;
+  }
+  
+  .card-image img {
+    top: calc(0% - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+  }
+  
+  /** Footer **/
+  
+  .footer {
+    height: 180px;
+  }
+  
