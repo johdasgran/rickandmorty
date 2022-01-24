@@ -3,6 +3,7 @@
   --sm: 1.6rem;
   --md: 2.2rem;
   --lg: 2.8rem;
+  --title: 4rem;
 }
 
 h2 {
@@ -11,6 +12,9 @@ h2 {
 
 header {
   height: 180px;
+  padding-top: 32px;
+  padding-bottom: 180px;
+  border-radius: 0 0 16px 16px;
 }
 
 .header img {
@@ -21,6 +25,7 @@ header {
 
 .main {
   grid-template-columns: repeat(auto-fill, minmax(140px, 200px));
+  padding: 120px 12px 12px 12px;
   gap: 20px;
 }
 
@@ -42,5 +47,14 @@ header {
 /** Footer **/
 
 .footer {
-  height: 150px;
+  border-radius: 16px 16px 0 0;
+  height: 180px;
+}
+
+div.container-redes {
+  font-size: 3rem;
+}
+
+div .redes {
+  margin: 12px 8px;
 }

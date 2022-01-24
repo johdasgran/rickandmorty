@@ -6,13 +6,14 @@
   --rick-text: #184d57;
   --rick-secondary: #ace9fd;
   --rick-purple-dark: #9200b6;
-  --rick-purple-light:#eabbf3;
+  --rick-purple-light: #eabbf3;
   --rick: #39b3c9;
-
+  --rick-body: #c8e1ff;
   /* Font size */
   --sm: 1.2rem;
   --md: 1.8rem;
   --lg: 2.4rem;
+  --title: 3rem;
 
   /* Weight */
   --light: 300;
@@ -53,24 +54,103 @@ p {
 }
 
 body {
-  background-color: var(--rick-dark);
-  
+  background-color: var(--rick-body);
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rick-body) var(--rick-dark);
+}
+
+/* Works on Chrome, Edge, and Safari */
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--rick-dark); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--rick-body); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--rick-dark); /* creates padding around scroll thumb */
 }
 
 header {
   display: flex;
-  /* place-items: center; */
   place-content: center;
   height: 90px;
   width: 100%;
-  /* margin-bottom: 24px; */
-  margin-top: 24px;
-  margin-bottom: 80px;
+  padding-top: 24px;
+  padding-bottom: 100px;
+  background-color: var(--rick-dark);
+  border-radius: 0 0 12px 12px;
 }
 .header img {
   height: 80px;
   width: auto;
   object-fit: cover;
+}
+
+.vibrate {
+  -webkit-animation: vibrate 0.3s linear infinite both;
+  animation: vibrate 0.3s linear infinite both;
+}
+
+@-webkit-keyframes vibrate {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes vibrate {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
 }
 
 /*** Container Card ***/
@@ -80,7 +160,8 @@ header {
   grid-template-columns: repeat(2, minmax(140px, 180px));
   place-content: center;
   gap: 12px;
-  margin: 12px;
+  padding: 80px 12px 12px 12px;
+  /* background-color: #c8e1ff; */
 }
 
 .container-card {
@@ -97,6 +178,80 @@ header {
   padding: 70px 8px 16px 8px;
 }
 
+.heartbeat:hover {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
 .card-image img {
   position: absolute;
   top: -60px;
@@ -106,7 +261,6 @@ header {
   height: 120px;
   border-radius: 50%;
   border: 3px solid var(--rick-secondary);
-
 }
 
 .card-title p,
@@ -119,7 +273,6 @@ header {
   font-weight: var(--bold);
 }
 
-
 /** Footer **/
 
 .footer {
@@ -127,22 +280,35 @@ header {
   flex-direction: column;
   place-items: center;
   place-content: center;
-  height: 100px;
-  background-color: var(--rick-secondary);
+  height: 140px;
+  /* background-color: var(--rick-secondary); */
+  background-color: var(--rick-dark);
+  border-radius: 12px 12px 0 0;
 }
 
 .footer h1 {
-  color: var(--rick-dark);
-  font-size: var(--lg);
+  color: var(--rick-body);
+  font-size: var(--title);
   font-weight: 700;
   padding-bottom: 8px;
 }
 
 .footer p {
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--rick);
 }
 
 .footer p a {
   text-decoration: none;
-  color: var(--rick-purple-dark);
+  color: var(--rick-body);
+}
+
+div.container-redes {
+  display: flex;
+  font-size: 2rem;
+}
+
+div .redes {
+  color: var(--rick-body);
+  margin: 12px 4px;
 }

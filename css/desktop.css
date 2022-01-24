@@ -3,6 +3,7 @@
     --sm: 2rem;
     --md: 2.6rem;
     --lg: 3.2rem;
+    --title: 5rem;
   }
 
   h2 {
@@ -12,7 +13,9 @@
   
   header {
     height: 250px;
-    margin-bottom: 140px;
+    padding-top: 40px;
+    padding-bottom: 300px;
+    border-radius: 0 0 24px 24px;
   }
   
   .header img {
@@ -23,6 +26,7 @@
   
   .main {
     grid-template-columns: repeat(auto-fill, minmax(140px, 250px));
+    padding: 140px 12px 12px 12px;
     gap: 30px;
   }
 
@@ -44,6 +48,7 @@
   /** Footer **/
   
   .footer {
-    height: 180px;
+    border-radius: 24px 24px 0 0;
+    height: 220px;
   }
   
