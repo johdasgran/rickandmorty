@@ -33,7 +33,7 @@ const fetch_data = async () => {
       <div class="card-title">
         <h2>${name}</h2>
         <!-- 🔴🟢⚪ -->
-        <p class="status"><span>Status: 🔴 </span>${status}</p>
+        <p class="status"><span>Status: 🟢 </span>${status}</p>
         <p class="species"><span>Species: </span>${species}</p>
         <p class="gender"><span>Gender: </span>${gender}</p>
       </div>
