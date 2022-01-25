@@ -80,28 +80,32 @@ const fetch_data = async () => {
     title_card.textContent = name;
     card_text.appendChild(title_card);
 
-    // Status
+    // Status tag "p" container
     let status_card = document.createElement("p");
-    let alive = document.createElement("span");
-
-    
-   
-    alive.className = "status";
     status_card.textContent = status;
     card_text.appendChild(status_card);
+    // Status tag "span" child
+    let alive_or_dead = document.createElement("span");
+    alive_or_dead.className = "status";
 
-    status_card.append(status , document.createElement("span"));
- 
-    if (status == "Alive") {  
-      alive.textContent = "Status: 🟢 ";
+    if (status == "Alive") {
+      alive_or_dead.textContent = "Status: 🟢 ";
+      status_card.textContent = status;
     } else if (status == "Dead") {
-      alive.textContent = "Status: 🔴 ";
+      alive_or_dead.textContent = "Status: 🔴 ";
     } else {
-      alive.textContent = "Status: ⚪ ";
+      alive_or_dead.textContent = "Status: ⚪ ";
     }
-    status_card.appendChild(alive);
-
+    status_card.insertAdjacentElement("afterbegin", alive_or_dead);
   }
+
+
+
+
+
+
+
+
 
   addCard();
 };
