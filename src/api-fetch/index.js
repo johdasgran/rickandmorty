@@ -2,7 +2,6 @@
 
 /*********  Bebe ese novio tuyo es medio culero   **********/
 
-
 const fetch_data = async () => {
   const response = await fetch("https://rickandmortyapi.com/api/character/");
   const API_DATA = await response.json();
@@ -21,39 +20,90 @@ const fetch_data = async () => {
   // const character = await API_DATA.results[0].origin.url;
   // console.log(character)
 
-  let card = document.querySelector("main#card");
+  //   let card = document.querySelector("main#card");
 
-  const cards = card.innerHTML = `
-  <div class="container-card heartbeat">
-    <div id="image" class="card-image">
-      <img id="image" src="${url_image}" alt="" />
-    </div>
+  // card.innerHTML = `
+  //   <div class="container-card heartbeat">
+  //     <div id="image" class="card-image">
+  //       <img id="image" src="${url_image}" alt="" />
+  //     </div>
 
-    <div class="container-text">
-      <div class="card-title">
-        <h2>${name}</h2>
-        <!-- 🔴🟢⚪ -->
-        <p class="status"><span>Status: 🟢 </span>${status}</p>
-        <p class="species"><span>Species: </span>${species}</p>
-        <p class="gender"><span>Gender: </span>${gender}</p>
-      </div>
+  //     <div class="container-text">
+  //       <div class="card-title">
+  //         <h2>${name}</h2>
+  //         <!-- 🔴🟢⚪ -->
+  //         <p class="status"><span>Status: 🟢 </span>${status}</p>
+  //         <p class="species"><span>Species: </span>${species}</p>
+  //         <p class="gender"><span>Gender: </span>${gender}</p>
+  //       </div>
 
-      <div class="location">
-        <h2>Location:</h2>
-        <p class="name"><span>Name: </span>Purge Planet</p>
-        <p class="dimesion">
-          <span>Dimension: </span>Replacement DImension
-        </p>
-      </div>
-    </div>
-  </div>
-`;
+  //       <div class="location">
+  //         <h2>Location:</h2>
+  //         <p class="name"><span>Name: </span>Purge Planet</p>
+  //         <p class="dimesion">
+  //           <span>Dimension: </span>Replacement DImension
+  //         </p>
+  //       </div>
+  //     </div>
+  //   </div>
+  // `;
 
+  function addCard() {
+    let container = document.querySelector("main.main");
 
+    // Main card container
+    let container_card = document.createElement("div");
+    container_card.classList = "container-card heartbeat";
+    container_card.id = "image";
+    container.appendChild(container_card);
+    console.log(container_card);
 
-  const list_card = [cards];
-  console.log(list_card);
+    // Container image
+    let card_image = document.createElement("div");
+    card_image.className = "card-image";
+    card_image.id = "image";
+    container_card.appendChild(card_image);
 
+    // Image
+    let image = document.createElement("img");
+    image.src = url_image;
+    image.alt = name;
+    card_image.appendChild(image);
+
+    // Container text
+    let card_text = document.createElement("div");
+    card_text.className = "container-text";
+    container_card.appendChild(card_text);
+
+    // Title
+    let title_card = document.createElement("h2");
+    title_card.textContent = name;
+    card_text.appendChild(title_card);
+
+    // Status
+    let status_card = document.createElement("p");
+    let alive = document.createElement("span");
+
+    
+   
+    alive.className = "status";
+    status_card.textContent = status;
+    card_text.appendChild(status_card);
+
+    status_card.append(status , document.createElement("span"));
+ 
+    if (status == "Alive") {  
+      alive.textContent = "Status: 🟢 ";
+    } else if (status == "Dead") {
+      alive.textContent = "Status: 🔴 ";
+    } else {
+      alive.textContent = "Status: ⚪ ";
+    }
+    status_card.appendChild(alive);
+
+  }
+
+  addCard();
 };
 
 fetch_data();
