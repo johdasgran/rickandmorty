@@ -17,6 +17,10 @@
     padding-bottom: 240px;
     border-radius: 0 0 24px 24px;
   }
+
+  main.rick {
+    background: url(../images/backgrounds/rick-and-morty-api-2.png);
+  }
   
   .header img {
     height: 190px;
