@@ -20,6 +20,7 @@ const fetch_data = async () => {
     const species = API_DATA.results[i].species;
     const gender = API_DATA.results[i].gender;
 
+    
     const location_name = gps.results[i].name;
     const location_dimension = gps.results[i].dimension;
 
