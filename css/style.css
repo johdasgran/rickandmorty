@@ -91,17 +91,18 @@ header {
   height: 90px;
   width: 100%;
   padding-top: 24px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
   background-color: var(--rick-dark);
   border-radius: 0 0 12px 12px;
 }
 .header img {
-  height: 60px;
+  height: 80px;
   width: auto;
   object-fit: cover;
 }
 
 .header .icon-rick {
+  display: none;
   height: 55px;
   width: auto;
 }

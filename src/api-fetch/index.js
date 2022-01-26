@@ -104,9 +104,9 @@ const fetch_data = async () => {
       card_text.appendChild(card_location);
 
       // Title location
-      // let title_location = document.createElement("h2");
-      // title_location.textContent = "Location: ";
-      // card_location.appendChild(title_location);
+      let title_location = document.createElement("h2");
+      title_location.textContent = "Location: ";
+      card_location.appendChild(title_location);
 
       // name location tag "p" container
       let location_card = document.createElement("p");

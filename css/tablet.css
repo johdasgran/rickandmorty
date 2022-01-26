@@ -22,6 +22,7 @@ header {
 }
 
 .header .icon-rick {
+  display: block;
   height: 125px;
   width: auto;
 }
