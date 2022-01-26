@@ -57,8 +57,24 @@ body {
   background-color: var(--rick-body);
 }
 
-main.rick {
+/* main.rick {
   background: url(../images/backgrounds/rick-and-morty-api-768.png);
+} */
+
+main {
+  position: relative;
+}
+
+main.rick::after {
+  content: "";
+  background: url(../images/backgrounds/rick-and-morty-api-768.png);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
 
