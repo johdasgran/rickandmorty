@@ -73,7 +73,7 @@ const fetch_data = async () => {
       } else if (status == "Dead") {
         alive_or_dead.textContent = "Status: 🔴 ";
       } else {
-        alive_or_dead.textContent = "Status: ⚪ ";
+        alive_or_dead.textContent = "Status: ​​⚫️​ ";
       }
       status_card.insertAdjacentElement("afterbegin", alive_or_dead);
 

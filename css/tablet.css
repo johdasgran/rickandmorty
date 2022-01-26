@@ -18,7 +18,12 @@ header {
 }
 
 .header img {
-  height: 150px;
+  height: 140px;
+}
+
+.header .icon-rick {
+  height: 125px;
+  width: auto;
 }
 
 /*** Container Card ***/

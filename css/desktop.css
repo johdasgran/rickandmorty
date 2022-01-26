@@ -14,12 +14,17 @@
   header {
     height: 250px;
     padding-top: 40px;
-    padding-bottom: 300px;
+    padding-bottom: 240px;
     border-radius: 0 0 24px 24px;
   }
   
   .header img {
-    height: 250px;
+    height: 190px;
+  }
+
+  .header .icon-rick {
+    height: 170px;
+    width: auto;
   }
   
   /*** Container Card ***/
