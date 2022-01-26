@@ -1,63 +1,61 @@
 :root {
-    /* Font size */
-    --sm: 2rem;
-    --md: 2.6rem;
-    --lg: 3.2rem;
-    --title: 5rem;
-  }
+  /* Font size */
+  --sm: 2rem;
+  --md: 2.6rem;
+  --lg: 3.2rem;
+  --title: 5rem;
+}
 
-  h2 {
-    padding: 6px 0;
-  }
-  
-  
-  header {
-    height: 250px;
-    padding-top: 40px;
-    padding-bottom: 240px;
-    border-radius: 0 0 24px 24px;
-  }
+h2 {
+  padding: 6px 0;
+}
 
-  main.rick::after {
-    background: url(../images/backgrounds/rick-and-morty-api-2.png);
-  }
-  
-  .header img {
-    height: 190px;
-  }
+header {
+  height: 250px;
+  padding-top: 40px;
+  padding-bottom: 240px;
+  border-radius: 0 0 24px 24px;
+}
 
-  .header .icon-rick {
-    height: 170px;
-    width: auto;
-  }
-  
-  /*** Container Card ***/
-  
-  .main {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 250px));
-    padding: 140px 12px 12px 12px;
-    gap: 30px;
-  }
+main.rick::after {
+  background: url(../images/backgrounds/rick-and-morty-api-2.png);
+}
 
-  .container-card {
-    margin-bottom: 120px;
-  }
-  
-  .container-text {
-    padding: 120px 8px 30px 8px;
-  }
-  
-  .card-image img {
-    top: calc(0% - 100px);
-    left: calc(50% - 100px);
-    width: 200px;
-    height: 200px;
-  }
-  
-  /** Footer **/
-  
-  .footer {
-    border-radius: 24px 24px 0 0;
-    height: 220px;
-  }
-  
+.header img {
+  height: 190px;
+}
+
+.header .icon-rick {
+  height: 170px;
+  width: auto;
+}
+
+/*** Container Card ***/
+
+.main {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 250px));
+  padding: 140px 12px 12px 12px;
+  gap: 30px;
+}
+
+.container-card {
+  margin-bottom: 120px;
+}
+
+.container-text {
+  padding: 120px 8px 30px 8px;
+}
+
+.card-image img {
+  top: calc(0% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+}
+
+/** Footer **/
+
+.footer {
+  border-radius: 24px 24px 0 0;
+  height: 220px;
+}
