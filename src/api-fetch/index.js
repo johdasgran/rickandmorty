@@ -2,13 +2,11 @@
 
 /*********  Bebe ese novio tuyo es medio culero   **********/
 
-const fetch_data = async () => {
-  const response = await fetch("https://rickandmortyapi.com/api/character/");
-  const location = await fetch("https://rickandmortyapi.com/api/location/");
-  const API_DATA = await response.json();
-  const gps = await location.json();
+const API = "https://rickandmortyapi.com/api/character/";
 
-  console.log(gps);
+const fetch_data = async () => {
+  const response = await fetch(API);
+  const API_DATA = await response.json();
 
   for (let i = 0; i < API_DATA.results.length; i++) {
     // const element = API_DATA.results[i].name;
@@ -20,9 +18,16 @@ const fetch_data = async () => {
     const species = API_DATA.results[i].species;
     const gender = API_DATA.results[i].gender;
 
-    
-    const location_name = gps.results[i].name;
-    const location_dimension = gps.results[i].dimension;
+    try {
+      const url_origin = await fetch(API_DATA.results[i].location.url);
+      const origin = await url_origin.json();
+      var location_name = origin.name;
+      var location_dimension = origin.dimension;
+    } catch (error) {
+      console.log("Url origin empty");
+      var location_name = "Unknown";
+      var location_dimension = "Unknown";
+    }
 
     function addCard() {
       let container = document.querySelector("main.main");
@@ -98,7 +103,6 @@ const fetch_data = async () => {
       class_gender.className = "status";
       gender_card.insertAdjacentElement("afterbegin", class_gender);
 
-      /** */
       // Location
       let card_location = document.createElement("div");
       card_location.className = "location";
