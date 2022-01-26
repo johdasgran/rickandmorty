@@ -68,7 +68,7 @@ main {
 main.rick::after {
   content: "";
   background: url(../images/backgrounds/rick-and-morty-api-768.png);
-  opacity: 0.5;
+  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
